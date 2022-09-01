@@ -1,0 +1,21 @@
+{
+  "name": "intelligence-ontology",
+  "scripts": {
+    "install": "napa https://github.com/RDFLib/pyLODE",
+    "build-docs": "python node_modules/pyLODE/pylode intelligence-rdf.owl -o docs/index.html",
+    "build": "python convert.py && npm run build-docs",
+    "docs": "npm run build && open docs/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graywolftech/intelligence-ontology.git"
+  },
+  "bugs": {
+    "url": "https://github.com/graywolftech/intelligence-ontology/issues"
+  },
+  "homepage": "https://github.com/graywolftech/intelligence-ontology#readme",
+  "devDependencies": {
+    "napa": "^3.0.0",
+    "open": "^8.4.0"
+  }
+}

@@ -1,0 +1,737 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://semantics.graywolfai.com/intelligence#"
+     xml:base="https://semantics.graywolfai.com/intelligence"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://semantics.graywolfai.com/intelligence">
+        <rdfs:comment xml:lang="en">This ontology lays out a framework for representing intelligence in digital forensic investigations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gray Wolf Intelligence Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#hasAddressType -->
+
+    <owl:ObjectProperty rdf:about="https://semantics.graywolfai.com/intelligence#hasAddressType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://semantics.graywolfai.com/intelligence#Address"/>
+        <rdfs:range rdf:resource="https://semantics.graywolfai.com/intelligence#AddressType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#hasChildAddress -->
+
+    <owl:ObjectProperty rdf:about="https://semantics.graywolfai.com/intelligence#hasChildAddress">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://semantics.graywolfai.com/intelligence#CitationTree"/>
+        <rdfs:range rdf:resource="https://semantics.graywolfai.com/intelligence#Address"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#hasChildBehaviour -->
+
+    <owl:ObjectProperty rdf:about="https://semantics.graywolfai.com/intelligence#hasChildBehaviour">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://semantics.graywolfai.com/intelligence#CitationTree"/>
+        <rdfs:range rdf:resource="https://semantics.graywolfai.com/intelligence#Behaviour"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#hasChildCitationTree -->
+
+    <owl:ObjectProperty rdf:about="https://semantics.graywolfai.com/intelligence#hasChildCitationTree">
+        <owl:inverseOf rdf:resource="https://semantics.graywolfai.com/intelligence#hasParentCitationTree"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://semantics.graywolfai.com/intelligence#CitationTree"/>
+        <rdfs:range rdf:resource="https://semantics.graywolfai.com/intelligence#CitationTree"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#hasChildWallet -->
+
+    <owl:ObjectProperty rdf:about="https://semantics.graywolfai.com/intelligence#hasChildWallet">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://semantics.graywolfai.com/intelligence#CitationTree"/>
+        <rdfs:range rdf:resource="https://semantics.graywolfai.com/intelligence#Wallet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#hasController -->
+
+    <owl:ObjectProperty rdf:about="https://semantics.graywolfai.com/intelligence#hasController">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://semantics.graywolfai.com/intelligence#isControlling"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#hasInitiator -->
+
+    <owl:ObjectProperty rdf:about="https://semantics.graywolfai.com/intelligence#hasInitiator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://semantics.graywolfai.com/intelligence#Event"/>
+        <rdfs:range rdf:resource="https://semantics.graywolfai.com/intelligence#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#hasParentCitationTree -->
+
+    <owl:ObjectProperty rdf:about="https://semantics.graywolfai.com/intelligence#hasParentCitationTree">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://semantics.graywolfai.com/intelligence#CitationTree"/>
+        <rdfs:range rdf:resource="https://semantics.graywolfai.com/intelligence#CitationTree"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#hasTransactionType -->
+
+    <owl:ObjectProperty rdf:about="https://semantics.graywolfai.com/intelligence#hasTransactionType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://semantics.graywolfai.com/intelligence#Transaction"/>
+        <rdfs:range rdf:resource="https://semantics.graywolfai.com/intelligence#TransactionType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#involvesNetworkEvent -->
+
+    <owl:ObjectProperty rdf:about="https://semantics.graywolfai.com/intelligence#involvesNetworkEvent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://semantics.graywolfai.com/intelligence#Behaviour"/>
+        <rdfs:range rdf:resource="https://semantics.graywolfai.com/intelligence#NetworkEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#isControlling -->
+
+    <owl:ObjectProperty rdf:about="https://semantics.graywolfai.com/intelligence#isControlling">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://semantics.graywolfai.com/intelligence#Entity"/>
+        <rdfs:range rdf:resource="https://semantics.graywolfai.com/intelligence#ControllableThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#madeTransaction -->
+
+    <owl:ObjectProperty rdf:about="https://semantics.graywolfai.com/intelligence#madeTransaction">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://semantics.graywolfai.com/intelligence#Address"/>
+        <rdfs:range rdf:resource="https://semantics.graywolfai.com/intelligence#Transaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#hash -->
+
+    <owl:DatatypeProperty rdf:about="https://semantics.graywolfai.com/intelligence#hash">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#Address -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#Address">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#ControllableThing"/>
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#AddressType -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#AddressType"/>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#Administrator -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#Administrator">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#User"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#Behaviour -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#Behaviour">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#SystemEvent"/>
+        <rdfs:comment xml:lang="en">This class represents a list of network events that together represent a behaviour on the blockchain. For example, this could represent a group of related transactions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourType -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BitcoinAddress -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#BitcoinAddress">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#Address"/>
+        <owl:disjointWith rdf:resource="https://semantics.graywolfai.com/intelligence#EthereumAddress"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BitcoinAddressType -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#BitcoinAddressType">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#AddressType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BitcoinTransaction -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#BitcoinTransaction">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#Transaction"/>
+        <owl:disjointWith rdf:resource="https://semantics.graywolfai.com/intelligence#EthereumTransaction"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BitcoinTransactionType -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#BitcoinTransactionType">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#TransactionType"/>
+        <owl:disjointWith rdf:resource="https://semantics.graywolfai.com/intelligence#EthereumTransactionType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#CitationTree -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#CitationTree">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#ComplianceOfficer -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#ComplianceOfficer">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#User"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#ContractEthereum -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#ContractEthereum">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#EthereumAddress"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#ControllableThing -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#ControllableThing"/>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#Entity -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#Entity"/>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#EthereumAddress -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#EthereumAddress">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#Address"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#EthereumAddressType -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#EthereumAddressType">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#AddressType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#EthereumTransaction -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#EthereumTransaction">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#Transaction"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#EthereumTransactionType -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#EthereumTransactionType">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#TransactionType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#Evaluator -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#Evaluator">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#User"/>
+        <rdfs:comment xml:lang="en">This class represents users that are evaluating the system to determine if it works for their purposes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#Event -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#Event">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#Investigator -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#Investigator">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#User"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#NetworkEvent -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#NetworkEvent">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#Note -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#Note">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#SystemEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#Organization -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#Organization">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#Person -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#Person">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#Reel -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#Reel">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#SystemEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#SystemEvent -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#SystemEvent">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#Transaction -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#Transaction">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#NetworkEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#TransactionType -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#TransactionType"/>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A class to represent things that are uniquely identified. In particular, this class should represent items that can be fetched using an identifier from a common search field.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#User -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#User">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#Person"/>
+        <rdfs:comment xml:lang="en">This class defines a user that interacts with the intelligence system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#Wallet -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#Wallet">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#ControllableThing"/>
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#AddressBECH32 -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#AddressBECH32">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BitcoinAddressType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#AddressContract -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#AddressContract">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#EthereumAddressType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#AddressP2PKH -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#AddressP2PKH">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BitcoinAddressType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#AddressP2SH -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#AddressP2SH">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BitcoinAddressType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#AddressWallet -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#AddressWallet">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#EthereumAddressType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourExtort -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourExtort">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a transfer of native tokens made under duress.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourFaucetSource -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourFaucetSource">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a transfer of native tokens from a faucet.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourFund -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourFund">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a transfer of native tokens to a service which maintains a balance in native tokens while holding custody of the tokens themselves elsewhere.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourGift -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourGift">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a gift of native tokens from one address to another.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourHYIP -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourHYIP">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a transfer of native tokens from an address into a High-Yield Investment Program.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourMigrate -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourMigrate">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a transfer of the entire balance of native tokens from one address to another under the control of the same entity.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourPay -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourPay">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a purchase using native tokens.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourPeel -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourPeel">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a scattering of native tokens once under a single address into many addresses, all controlled by the same entity.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourPhish -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourPhish">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents the remote theft of native tokens by tricking the user into believing they are interacting with a legitimate service.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourPool -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourPool">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a collection of native tokens under multiple addresses into a single address, all controlled by the same entity.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourReturn -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourReturn">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a return of stolen funds to the original owner.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourSell -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourSell">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a sale of native tokens for fiat.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourSextort -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourSextort">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a transfer of native tokens made under duress in an effort to prevent the release of private images.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourTheftDigital -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourTheftDigital">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a remote theft of native tokens from a secure device.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourTheftPhysical -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourTheftPhysical">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a physical theft of native tokens via private keys (paper wallet, cold storage, etc) or secure devices (Ledger, Trezor, ATM, mobile wallet, etc).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourTumble -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourTumble">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents an obfuscation of the flow-of-funds by having flows converge at a single or group of addresses before returning to their respective flow. In other words, funds get &quot;mixed together&quot; before being sent to their respective owners.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#BehaviourWithdraw -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#BehaviourWithdraw">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BehaviourType"/>
+        <rdfs:comment xml:lang="en">This behaviour represents a transfer of native tokens from a service which maintains a balance in native tokens while holding custody of the tokens themselves elsewhere.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#TransactionBECH32 -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#TransactionBECH32">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#TransactionDeploy -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#TransactionDeploy">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#EthereumTransactionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#TransactionExecute -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#TransactionExecute">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#EthereumTransactionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#TransactionP2PK -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#TransactionP2PK">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#TransactionP2PKH -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#TransactionP2PKH">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#TransactionP2SH -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#TransactionP2SH">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#TransactionP2TR -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#TransactionP2TR">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#TransactionP2WPKH -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#TransactionP2WPKH">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#TransactionP2WSH -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#TransactionP2WSH">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#TransactionTransfer -->
+
+    <owl:NamedIndividual rdf:about="https://semantics.graywolfai.com/intelligence#TransactionTransfer">
+        <rdf:type rdf:resource="https://semantics.graywolfai.com/intelligence#EthereumTransactionType"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
