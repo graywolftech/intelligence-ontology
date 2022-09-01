@@ -1,8 +1,0 @@
-[ {
-  "@id" : "https://semantics.graywolfai.com/intelligence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This ontology lays out a framework for representing intelligence in digital forensic investigations."
-  } ]
-} ]
