@@ -1,23 +1,7 @@
 [ {
-  "@id" : "_:genid1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
-  "http://www.w3.org/2002/07/owl#members" : [ {
-    "@list" : [ {
-      "@id" : "https://semantics.graywolfai.com/intelligence#Address"
-    }, {
-      "@id" : "https://semantics.graywolfai.com/intelligence#AddressType"
-    }, {
-      "@id" : "https://semantics.graywolfai.com/intelligence#Contract"
-    }, {
-      "@id" : "https://semantics.graywolfai.com/intelligence#Transaction"
-    }, {
-      "@id" : "https://semantics.graywolfai.com/intelligence#TransactionType"
-    } ]
-  } ]
-}, {
   "@id" : "https://semantics.graywolfai.com/intelligence",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "This ontology lays out a framework for representing intelligence in digital forensic investigations."
   } ]
@@ -25,45 +9,174 @@
   "@id" : "https://semantics.graywolfai.com/intelligence#Address",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#AddressableThing"
+    "@id" : "https://semantics.graywolfai.com/intelligence#ThingControllable"
   }, {
-    "@id" : "https://semantics.graywolfai.com/intelligence#ControllableThing"
+    "@id" : "https://semantics.graywolfai.com/intelligence#ThingUniquelyIdentified"
   } ]
 }, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#AddressType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@id" : "https://semantics.graywolfai.com/intelligence#AddressBECH32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeAddressBitcoin" ]
 }, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#AddressableThing",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing"
-  } ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#BECH32Address",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#BitcoinAddressType" ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#BECH32Transaction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType" ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#Behaviour",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#Occurrence"
-  } ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#BitcoinAddress",
+  "@id" : "https://semantics.graywolfai.com/intelligence#AddressBitcoin",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://semantics.graywolfai.com/intelligence#Address"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#EthereumAddress"
+    "@id" : "https://semantics.graywolfai.com/intelligence#AddressEthereum"
   } ]
 }, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#BitcoinAddressType",
+  "@id" : "https://semantics.graywolfai.com/intelligence#AddressContract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeAddressEthereum" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#AddressEthereum",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#AddressType"
+    "@id" : "https://semantics.graywolfai.com/intelligence#Address"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#AddressP2PKH",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeAddressBitcoin" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#AddressP2SH",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeAddressBitcoin" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#AddressWallet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeAddressEthereum" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#Administrator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#User"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#Behaviour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "This class represents a list of network events that together represent a behaviour on the blockchain. For example, this could represent a group of related transactions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#EventSystem"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourExtort",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a transfer of native tokens made under duress."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourFaucetSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a transfer of native tokens from a faucet."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourFund",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a transfer of native tokens to a service which maintains a balance in native tokens while holding custody of the tokens themselves elsewhere."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourGift",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a gift of native tokens from one address to another."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourHYIP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a transfer of native tokens from an address into a High-Yield Investment Program."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourMigrate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a transfer of the entire balance of native tokens from one address to another under the control of the same entity."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourPay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a purchase using native tokens."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourPeel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a scattering of native tokens once under a single address into many addresses, all controlled by the same entity."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourPhish",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents the remote theft of native tokens by tricking the user into believing they are interacting with a legitimate service."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourPool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a collection of native tokens under multiple addresses into a single address, all controlled by the same entity."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourReturn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a return of stolen funds to the original owner."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourSell",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a sale of native tokens for fiat."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourSextort",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a transfer of native tokens made under duress in an effort to prevent the release of private images."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourTheftDigital",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a remote theft of native tokens from a secure device."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourTheftPhysical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a physical theft of native tokens via private keys (paper wallet, cold storage, etc) or secure devices (Ledger, Trezor, ATM, mobile wallet, etc)."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourTumble",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents an obfuscation of the flow-of-funds by having flows converge at a single or group of addresses before returning to their respective flow. In other words, funds get \"mixed together\" before being sent to their respective owners."
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#BehaviourWithdraw",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeBehaviour" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This behaviour represents a transfer of native tokens from a service which maintains a balance in native tokens while holding custody of the tokens themselves elsewhere."
   } ]
 }, {
   "@id" : "https://semantics.graywolfai.com/intelligence#BitcoinTransaction",
@@ -75,52 +188,20 @@
     "@id" : "https://semantics.graywolfai.com/intelligence#EthereumTransaction"
   } ]
 }, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType",
+  "@id" : "https://semantics.graywolfai.com/intelligence#ComplianceOfficer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#TransactionType"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#EthereumTransactionType"
+    "@id" : "https://semantics.graywolfai.com/intelligence#User"
   } ]
 }, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#Contract",
+  "@id" : "https://semantics.graywolfai.com/intelligence#ContractEthereum",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#AddressableThing"
-  }, {
-    "@id" : "https://semantics.graywolfai.com/intelligence#ControllableThing"
+    "@id" : "https://semantics.graywolfai.com/intelligence#AddressEthereum"
   } ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#ContractAddress",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#EthereumAddressType" ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#ControllableThing",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#DeployTransaction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#EthereumTransactionType" ]
 }, {
   "@id" : "https://semantics.graywolfai.com/intelligence#Entity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#EthereumAddress",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#Address"
-  } ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#EthereumAddressType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#AddressType"
-  } ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#EthereumContract",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#Contract"
-  } ]
 }, {
   "@id" : "https://semantics.graywolfai.com/intelligence#EthereumTransaction",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -128,17 +209,45 @@
     "@id" : "https://semantics.graywolfai.com/intelligence#Transaction"
   } ]
 }, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#EthereumTransactionType",
+  "@id" : "https://semantics.graywolfai.com/intelligence#Evaluator",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class represents users that are evaluating the system to determine if it works for their purposes."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#TransactionType"
+    "@id" : "https://semantics.graywolfai.com/intelligence#User"
   } ]
 }, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#ExecuteTransaction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#EthereumTransactionType" ]
+  "@id" : "https://semantics.graywolfai.com/intelligence#Event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#ThingUniquelyIdentified"
+  } ]
 }, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#Occurrence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@id" : "https://semantics.graywolfai.com/intelligence#EventNetwork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#Event"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#EventSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#Event"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#Investigator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#User"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#Note",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#EventSystem"
+  } ]
 }, {
   "@id" : "https://semantics.graywolfai.com/intelligence#Organization",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -146,77 +255,121 @@
     "@id" : "https://semantics.graywolfai.com/intelligence#Entity"
   } ]
 }, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#P2PKHAddress",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#BitcoinAddressType" ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#P2PKHTransaction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType" ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#P2PKTransaction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType" ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#P2SHAddress",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#BitcoinAddressType" ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#P2SHTransaction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType" ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#P2TRTransaction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType" ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#P2WPKHTransaction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType" ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#P2WSHTransaction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType" ]
-}, {
   "@id" : "https://semantics.graywolfai.com/intelligence#Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://semantics.graywolfai.com/intelligence#Entity"
   } ]
 }, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#Reel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#EventSystem"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#ThingControllable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#ThingUniquelyIdentified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A class to represent things that are uniquely identified. In particular, this class should represent items that can be fetched using an identifier from a common search field."
+  } ]
+}, {
   "@id" : "https://semantics.graywolfai.com/intelligence#Transaction",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#Occurrence"
-  }, {
-    "@id" : "https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing"
+    "@id" : "https://semantics.graywolfai.com/intelligence#EventNetwork"
   } ]
 }, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#TransactionType",
+  "@id" : "https://semantics.graywolfai.com/intelligence#TransactionBECH32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeTransactionBitcoin" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TransactionDeploy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeTransactionEthereum" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TransactionExecute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeTransactionEthereum" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TransactionP2PK",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeTransactionBitcoin" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TransactionP2PKH",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeTransactionBitcoin" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TransactionP2SH",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeTransactionBitcoin" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TransactionP2TR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeTransactionBitcoin" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TransactionP2WPKH",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeTransactionBitcoin" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TransactionP2WSH",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeTransactionBitcoin" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TransactionTransfer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#TypeTransactionEthereum" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TreeCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#ThingUniquelyIdentified"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TypeAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#TransferTransaction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#EthereumTransactionType" ]
+  "@id" : "https://semantics.graywolfai.com/intelligence#TypeAddressBitcoin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#TypeAddress"
+  } ]
 }, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing",
+  "@id" : "https://semantics.graywolfai.com/intelligence#TypeAddressEthereum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#TypeAddress"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TypeBehaviour",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TypeTransaction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TypeTransactionBitcoin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#TypeTransaction"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#TypeTransactionEthereum"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#TypeTransactionEthereum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#TypeTransaction"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#User",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class defines a user that interacts with the intelligence system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#Person"
+  } ]
 }, {
   "@id" : "https://semantics.graywolfai.com/intelligence#Wallet",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#ControllableThing"
+    "@id" : "https://semantics.graywolfai.com/intelligence#ThingControllable"
   }, {
-    "@id" : "https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing"
-  } ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#WalletAddress",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://semantics.graywolfai.com/intelligence#EthereumAddressType" ]
-}, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#hasAddress",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#AddressableThing"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#Address"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#isAddressFor"
+    "@id" : "https://semantics.graywolfai.com/intelligence#ThingUniquelyIdentified"
   } ]
 }, {
   "@id" : "https://semantics.graywolfai.com/intelligence#hasAddressType",
@@ -225,19 +378,82 @@
     "@id" : "https://semantics.graywolfai.com/intelligence#Address"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#AddressType"
+    "@id" : "https://semantics.graywolfai.com/intelligence#TypeAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#hasChildAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#TreeCitation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#Address"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#hasChildBehaviour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#TreeCitation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#Behaviour"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#hasChildCitationTree",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#TreeCitation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#TreeCitation"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#hasParentCitationTree"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#hasChildWallet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#TreeCitation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#Wallet"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
   "@id" : "https://semantics.graywolfai.com/intelligence#hasController",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://semantics.graywolfai.com/intelligence#isControlling"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#hasInitiator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#Entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#hasParentCitationTree",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#TreeCitation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#TreeCitation"
   } ]
 }, {
   "@id" : "https://semantics.graywolfai.com/intelligence#hasTransactionType",
@@ -246,31 +462,37 @@
     "@id" : "https://semantics.graywolfai.com/intelligence#Transaction"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#TransactionType"
+    "@id" : "https://semantics.graywolfai.com/intelligence#TypeTransaction"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "https://semantics.graywolfai.com/intelligence#isAddressFor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  "@id" : "https://semantics.graywolfai.com/intelligence#hash",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
+}, {
+  "@id" : "https://semantics.graywolfai.com/intelligence#involvesNetworkEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#Behaviour"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://semantics.graywolfai.com/intelligence#EventNetwork"
   } ]
 }, {
   "@id" : "https://semantics.graywolfai.com/intelligence#isControlling",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://semantics.graywolfai.com/intelligence#Entity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#ControllableThing"
+    "@id" : "https://semantics.graywolfai.com/intelligence#ThingControllable"
   } ]
 }, {
   "@id" : "https://semantics.graywolfai.com/intelligence#madeTransaction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://semantics.graywolfai.com/intelligence#Wallet"
+    "@id" : "https://semantics.graywolfai.com/intelligence#Address"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://semantics.graywolfai.com/intelligence#Transaction"
