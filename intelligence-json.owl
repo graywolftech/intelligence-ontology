@@ -1,6 +1,6 @@
 [
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourReturn",
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourSextort",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://semantics.graywolfai.com/intelligence#BehaviourType"
@@ -8,7 +8,59 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "This behaviour represents a return of stolen funds to the original owner."
+        "@value": "This behaviour represents a transfer of native tokens made under duress in an effort to prevent the release of private images."
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#EthereumTransactionType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#TransactionType"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#AddressP2SH",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BitcoinAddressType"
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourExtort",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BehaviourType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This behaviour represents a transfer of native tokens made under duress."
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#TransactionP2SH",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#Wallet",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#ControllableThing"
+      },
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing"
       }
     ]
   },
@@ -24,20 +76,35 @@
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#TransactionTransfer",
+    "@id": "https://semantics.graywolfai.com/intelligence#BitcoinAddressType",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#EthereumTransactionType"
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#AddressType"
+      }
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourType",
+    "@id": "https://semantics.graywolfai.com/intelligence#ControllableThing",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourPool",
+    "@id": "https://semantics.graywolfai.com/intelligence#NetworkEvent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#Event"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourPay",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://semantics.graywolfai.com/intelligence#BehaviourType"
@@ -45,22 +112,200 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "This behaviour represents a collection of native tokens under multiple addresses into a single address, all controlled by the same entity."
+        "@value": "This behaviour represents a purchase using native tokens."
       }
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#Address",
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourTheftDigital",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BehaviourType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This behaviour represents a remote theft of native tokens from a secure device."
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This ontology lays out a framework for representing intelligence in digital forensic investigations."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Gray Wolf Intelligence Ontology"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourGift",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BehaviourType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This behaviour represents a gift of native tokens from one address to another."
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#AddressBECH32",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BitcoinAddressType"
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#hasChildBehaviour",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
+      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#CitationTree"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#Behaviour"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourReturn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BehaviourType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This behaviour represents a return of stolen funds to the original owner."
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourWithdraw",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BehaviourType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This behaviour represents a transfer of native tokens from a service which maintains a balance in native tokens while holding custody of the tokens themselves elsewhere."
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#hasInitiator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
+      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#Event"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#Entity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#topObjectProperty"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#hasAddressType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#FunctionalProperty",
+      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
+      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#Address"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#AddressType"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#topObjectProperty"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#BitcoinTransaction",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://semantics.graywolfai.com/intelligence#ControllableThing"
-      },
+        "@id": "https://semantics.graywolfai.com/intelligence#Transaction"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#EthereumTransaction"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#TransactionType"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#EthereumTransactionType"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#Event",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing"
       }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#TransactionP2WPKH",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"
     ]
   },
   {
@@ -92,70 +337,7 @@
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#hasInitiator",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
-      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#Event"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#Entity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#topObjectProperty"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#TransactionP2WSH",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#Reel",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#SystemEvent"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#EthereumAddress",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#Address"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#Organization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#Entity"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#Investigator",
+    "@id": "https://semantics.graywolfai.com/intelligence#Administrator",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -166,21 +348,7 @@
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#TransactionP2PK",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#TransactionP2TR",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourWithdraw",
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourFund",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://semantics.graywolfai.com/intelligence#BehaviourType"
@@ -188,95 +356,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "This behaviour represents a transfer of native tokens from a service which maintains a balance in native tokens while holding custody of the tokens themselves elsewhere."
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#hasParentCitationTree",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#InverseFunctionalProperty",
-      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
-      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#CitationTree"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#CitationTree"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#BitcoinAddress",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#Address"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#disjointWith": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#EthereumAddress"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#TransactionType"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#disjointWith": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#EthereumTransactionType"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#involvesNetworkEvent",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#TransitiveProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#Behaviour"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#NetworkEvent"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#TransactionBECH32",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourTheftDigital",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BehaviourType"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "This behaviour represents a remote theft of native tokens from a secure device."
+        "@value": "This behaviour represents a transfer of native tokens to a service which maintains a balance in native tokens while holding custody of the tokens themselves elsewhere."
       }
     ]
   },
@@ -310,91 +390,61 @@
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#BitcoinAddressType",
+    "@id": "https://semantics.graywolfai.com/intelligence#hasParentCitationTree",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#InverseFunctionalProperty",
+      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
+      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://semantics.graywolfai.com/intelligence#AddressType"
+        "@id": "https://semantics.graywolfai.com/intelligence#CitationTree"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#CitationTree"
       }
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#Entity",
+    "@id": "https://semantics.graywolfai.com/intelligence#involvesNetworkEvent",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#TransitiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#Behaviour"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#NetworkEvent"
+      }
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence",
+    "@id": "https://semantics.graywolfai.com/intelligence#TransactionP2PK",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Ontology"
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@language": "en",
-        "@value": "This ontology lays out a framework for representing intelligence in digital forensic investigations."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Gray Wolf Intelligence Ontology"
+        "@value": "A class to represent things that are uniquely identified. In particular, this class should represent items that can be fetched using an identifier from a common search field."
       }
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#TransactionExecute",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#EthereumTransactionType"
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#NetworkEvent",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#Event"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourSextort",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BehaviourType"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "This behaviour represents a transfer of native tokens made under duress in an effort to prevent the release of private images."
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#hash",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "http://www.w3.org/2002/07/owl#FunctionalProperty"
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#EthereumTransactionType",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#TransactionType"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#Administrator",
+    "@id": "https://semantics.graywolfai.com/intelligence#Investigator",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -402,6 +452,20 @@
       {
         "@id": "https://semantics.graywolfai.com/intelligence#User"
       }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#TransactionDeploy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#EthereumTransactionType"
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#TransactionTransfer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#EthereumTransactionType"
     ]
   },
   {
@@ -416,7 +480,67 @@
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourHYIP",
+    "@id": "https://semantics.graywolfai.com/intelligence#TransactionP2WSH",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#Evaluator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This class represents users that are evaluating the system to determine if it works for their purposes."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#User"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#AddressP2PKH",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BitcoinAddressType"
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#Person",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#Organization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#Entity"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#TransactionP2PKH",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourFaucetSource",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://semantics.graywolfai.com/intelligence#BehaviourType"
@@ -424,7 +548,164 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "This behaviour represents a transfer of native tokens from an address into a High-Yield Investment Program."
+        "@value": "This behaviour represents a transfer of native tokens from a faucet."
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#hasChildAddress",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
+      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#CitationTree"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#Address"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#hash",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourPool",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BehaviourType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This behaviour represents a collection of native tokens under multiple addresses into a single address, all controlled by the same entity."
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#hasChildWallet",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
+      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#CitationTree"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#Wallet"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#topObjectProperty"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourMigrate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BehaviourType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This behaviour represents a transfer of the entire balance of native tokens from one address to another under the control of the same entity."
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#EthereumAddressType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#AddressType"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#AddressWallet",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#EthereumAddressType"
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#BitcoinAddress",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#Address"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#EthereumAddress"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#Address",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#ControllableThing"
+      },
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#CitationTree",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#EthereumContract",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#EthereumAddress"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourPhish",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#BehaviourType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This behaviour represents the remote theft of native tokens by tricking the user into believing they are interacting with a legitimate service."
       }
     ]
   },
@@ -448,61 +729,69 @@
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourExtort",
+    "@id": "https://semantics.graywolfai.com/intelligence#hasChildCitationTree",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
+      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#CitationTree"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#CitationTree"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#hasParentCitationTree"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#isControlling",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
+      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#Entity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#ControllableThing"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#AddressContract",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BehaviourType"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "This behaviour represents a transfer of native tokens made under duress."
-      }
+      "https://semantics.graywolfai.com/intelligence#EthereumAddressType"
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#Behaviour",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "This class represents a list of network events that together represent a behaviour on the blockchain. For example, this could represent a group of related transactions."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#SystemEvent"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#TransactionP2SH",
+    "@id": "https://semantics.graywolfai.com/intelligence#TransactionBECH32",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#TransactionType",
+    "@id": "https://semantics.graywolfai.com/intelligence#TransactionExecute",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://semantics.graywolfai.com/intelligence#EthereumTransactionType"
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#ContractEthereum",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#EthereumAddress"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourGift",
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourHYIP",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://semantics.graywolfai.com/intelligence#BehaviourType"
@@ -510,7 +799,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "This behaviour represents a gift of native tokens from one address to another."
+        "@value": "This behaviour represents a transfer of native tokens from an address into a High-Yield Investment Program."
       }
     ]
   },
@@ -539,13 +828,30 @@
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#AddressType",
+    "@id": "https://semantics.graywolfai.com/intelligence#Behaviour",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This class represents a list of network events that together represent a behaviour on the blockchain. For example, this could represent a group of related transactions."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#SystemEvent"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#TransactionType",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourPhish",
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourSell",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://semantics.graywolfai.com/intelligence#BehaviourType"
@@ -553,215 +859,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "This behaviour represents the remote theft of native tokens by tricking the user into believing they are interacting with a legitimate service."
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#AddressContract",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#EthereumAddressType"
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#isControlling",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
-      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#Entity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#ControllableThing"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#CitationTree",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#BitcoinTransaction",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#Transaction"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#disjointWith": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#EthereumTransaction"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#hasChildWallet",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
-      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#CitationTree"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#Wallet"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#topObjectProperty"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#TransactionP2WPKH",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourPay",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BehaviourType"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "This behaviour represents a purchase using native tokens."
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#AddressBECH32",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BitcoinAddressType"
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#EthereumAddressType",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#AddressType"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourMigrate",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BehaviourType"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "This behaviour represents a transfer of the entire balance of native tokens from one address to another under the control of the same entity."
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#AddressP2SH",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BitcoinAddressType"
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#hasChildCitationTree",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
-      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#CitationTree"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#CitationTree"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#hasParentCitationTree"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#ComplianceOfficer",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#User"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#Evaluator",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "This class represents users that are evaluating the system to determine if it works for their purposes."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#User"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#Event",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourTumble",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BehaviourType"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "This behaviour represents an obfuscation of the flow-of-funds by having flows converge at a single or group of addresses before returning to their respective flow. In other words, funds get \"mixed together\" before being sent to their respective owners."
+        "@value": "This behaviour represents a sale of native tokens for fiat."
       }
     ]
   },
@@ -779,39 +877,14 @@
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A class to represent things that are uniquely identified. In particular, this class should represent items that can be fetched using an identifier from a common search field."
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#Wallet",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#ControllableThing"
-      },
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#UniquelyIdentifiedThing"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#AddressWallet",
+    "@id": "https://semantics.graywolfai.com/intelligence#TransactionP2TR",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#EthereumAddressType"
+      "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourFund",
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourTumble",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://semantics.graywolfai.com/intelligence#BehaviourType"
@@ -819,22 +892,53 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "This behaviour represents a transfer of native tokens to a service which maintains a balance in native tokens while holding custody of the tokens themselves elsewhere."
+        "@value": "This behaviour represents an obfuscation of the flow-of-funds by having flows converge at a single or group of addresses before returning to their respective flow. In other words, funds get \"mixed together\" before being sent to their respective owners."
       }
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#TransactionP2PKH",
+    "@id": "https://semantics.graywolfai.com/intelligence#AddressType",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BitcoinTransactionType"
+      "http://www.w3.org/2002/07/owl#Class"
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#AddressP2PKH",
+    "@id": "https://semantics.graywolfai.com/intelligence#Entity",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BitcoinAddressType"
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#EthereumAddress",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#Address"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#Reel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#SystemEvent"
+      }
+    ]
+  },
+  {
+    "@id": "https://semantics.graywolfai.com/intelligence#ComplianceOfficer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://semantics.graywolfai.com/intelligence#User"
+      }
     ]
   },
   {
@@ -851,113 +955,9 @@
     ]
   },
   {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourFaucetSource",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BehaviourType"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "This behaviour represents a transfer of native tokens from a faucet."
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#hasChildBehaviour",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
-      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#CitationTree"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#Behaviour"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourSell",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#BehaviourType"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "This behaviour represents a sale of native tokens for fiat."
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#ControllableThing",
+    "@id": "https://semantics.graywolfai.com/intelligence#BehaviourType",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#hasAddressType",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#FunctionalProperty",
-      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
-      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#Address"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#AddressType"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#topObjectProperty"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#TransactionDeploy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "https://semantics.graywolfai.com/intelligence#EthereumTransactionType"
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#Person",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#Entity"
-      }
-    ]
-  },
-  {
-    "@id": "https://semantics.graywolfai.com/intelligence#hasChildAddress",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#AsymmetricProperty",
-      "http://www.w3.org/2002/07/owl#IrreflexiveProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#CitationTree"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://semantics.graywolfai.com/intelligence#Address"
-      }
     ]
   }
 ]

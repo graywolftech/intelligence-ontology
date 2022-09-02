@@ -283,14 +283,6 @@
     
 
 
-    <!-- https://semantics.graywolfai.com/intelligence#ContractEthereum -->
-
-    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#ContractEthereum">
-        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#EthereumAddress"/>
-    </owl:Class>
-    
-
-
     <!-- https://semantics.graywolfai.com/intelligence#ControllableThing -->
 
     <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#ControllableThing"/>
@@ -315,6 +307,14 @@
 
     <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#EthereumAddressType">
         <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#AddressType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://semantics.graywolfai.com/intelligence#EthereumContract -->
+
+    <owl:Class rdf:about="https://semantics.graywolfai.com/intelligence#EthereumContract">
+        <rdfs:subClassOf rdf:resource="https://semantics.graywolfai.com/intelligence#EthereumAddress"/>
     </owl:Class>
     
 
